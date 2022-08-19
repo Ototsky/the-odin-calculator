@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 body {
   display: flex;
@@ -22,7 +24,7 @@ body {
   height: 100%;
 }
 .display {
-    position: relative;
+  position: relative;
   height: 24%;
   width: 100%;
   background-color: #0b071f;
@@ -34,9 +36,9 @@ body {
   align-items: flex-end;
 }
 .numric {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
 }
 .btns {
   display: grid;
@@ -70,10 +72,10 @@ button {
   align-items: center;
 }
 button:not(.equals):hover {
-    transform: translateY(-5px);
-    background-color: #145369;
+  transform: translateY(-5px);
+  background-color: #145369;
 }
 .equals:hover {
-    transform: translateY(-5px);
-    background-color: #410d7e;
+  transform: translateY(-5px);
+  background-color: #410d7e;
 }
