@@ -12,6 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #6e615c;
+  flex-direction: column;
 }
 .calculator {
   width: 300px;
@@ -39,6 +40,11 @@ body {
   position: absolute;
   right: 10px;
   bottom: 10px;
+}
+.input {
+  position: absolute;
+  top: 10px;
+  right: 5px;
 }
 .btns {
   display: grid;
@@ -78,4 +84,8 @@ button:not(.equals):hover {
 .equals:hover {
   transform: translateY(-5px);
   background-color: #410d7e;
+}
+footer {
+  position: relative;
+  bottom: -60px;
 }
