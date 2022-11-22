@@ -3,16 +3,17 @@ const nums = document.querySelectorAll(".num");
 const operation = document.querySelectorAll(".oper");
 const equals = document.querySelector(".equals");
 const allBtns = document.querySelectorAll("button");
-const numric = document.querySelector(".numric");
+const output = document.querySelector(".output");
 
 allBtns.forEach((btn) =>
-  btn.addEventListener("click", function (e) {
+btn.addEventListener("click", function (e) {
+    if (btn.id === "clear") return
     value = e.target.textContent;
     if (value === "=") {
       if (input.innerText.includes("+")) {
         let newVal = input.innerText.split("+");
-        numric.textContent = "";
-        numric.textContent += operate(
+        output.textContent = "";
+        output.textContent += operate(
           Number(newVal[0]),
           Number(newVal[1]),
           "+"
@@ -21,8 +22,8 @@ allBtns.forEach((btn) =>
       }
       if (input.innerText.includes("-")) {
         let newVal = input.innerText.split("-");
-        numric.textContent = "";
-        numric.textContent += operate(
+        output.textContent = "";
+        output.textContent += operate(
           Number(newVal[0]),
           Number(newVal[1]),
           "-"
@@ -31,8 +32,8 @@ allBtns.forEach((btn) =>
       }
       if (input.innerText.includes("*")) {
         let newVal = input.innerText.split("*");
-        numric.textContent = "";
-        numric.textContent += operate(
+        output.textContent = "";
+        output.textContent += operate(
           Number(newVal[0]),
           Number(newVal[1]),
           "*"
@@ -41,8 +42,8 @@ allBtns.forEach((btn) =>
       }
       if (input.innerText.includes("/")) {
         let newVal = input.innerText.split("/");
-        numric.textContent = "";
-        numric.textContent += operate(
+        output.textContent = "";
+        output.textContent += operate(
           Number(newVal[0]),
           Number(newVal[1]),
           "/"
@@ -55,6 +56,13 @@ allBtns.forEach((btn) =>
     }
   })
 );
+
+
+let clear = document.getElementById("clear")
+  clear.addEventListener("click", () => {
+    input.textContent = ""
+    output.textContent = 0
+})
 
 function operate(num1, num2, operation) {
   if (operation === "+") {
